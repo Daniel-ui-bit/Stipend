@@ -9,7 +9,7 @@
 <body>
     <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
         <div class="container">
-            <div class="col-6">
+            <div class="col-12">
                 <div class="rec_Sfondo">
             
                     <div class="row">
@@ -20,13 +20,13 @@
 
                     <div class="row">
                         <div class="col-1">
-                            <p class="Paraghrap">Giorni</p>
+                            <p class="Paraghrap"><b>Giorni</b></p> 
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-4">
-                            <input type="text" id="DurataLavoro" name="DurataLavoro" placeholder="Quanti giorni durerà il lavoro?">
+                            <input type="text" id="DurataLavoro" name="DurataLavoro" placeholder="Quanti giorni durerà il lavoro?" class="Text-box">
                         </div>
                     </div>
 
@@ -37,14 +37,14 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-1">
+                        <div class="col-2">
                             <p class="Paraghrap">Ore giornaliere di lavoro</p>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-4">
-                            <input type="text" id="QuantoLavori" name="QuantoLavori" placeholder="Quanto lavori al giorno?">
+                            <input type="text" id="QuantoLavori" name="QuantoLavori" placeholder="Quanto lavori al giorno?" class="Text-box">
                         </div>
                     </div>
 
@@ -55,32 +55,32 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-1">
+                        <div class="col-2">
                             <p class="Paraghrap">Compenso orario</p>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-4">
-                            <input type="text" id="PagamentoOra" name="PagamentoOra" placeholder="Quanto verrai pagato all’ora?">
+                            <input type="text" id="PagamentoOra" name="PagamentoOra" placeholder="Quanto verrai pagato all’ora?" class="Text-box">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-2">
-                            <p class="Campo_OBG">CaMpo obbligatorio</p>
+                            <p class="Campo_OBG">Campo obbligatorio</p>
                         </div>
                     </div>
                 
                     <div class="row">
                         <div class="col-4">
-                            <input type="submit" name="submit" value="Calcola">
+                            <input type="submit" name="submit" value="Calcola" class="Button">
                         </div>
                     </div>
                     
                     <div class="row">
-                        <div class="col-6">
-                            <p>"Guadagnerai <b><span id="PagamentoLavoro"></span> €</b> lavorando <span id="DurataDelLavoro"></span> giorni al compenso di <span id="PagamentoPerOra"></span> €/h";</p>
+                        <div class="col-4">
+                            <p class="Result">Guadagnerai <b><span id="PagamentoLavoro"></span> €</b> lavorando <span id="DurataDelLavoro"></span> giorni al compenso di <span id="PagamentoPerOra"></span> €/h</p>
                         </div>
                     </div>
                     

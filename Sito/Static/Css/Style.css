@@ -1,6 +1,55 @@
 .title{
     font-size: 42px;
-    font-weight: 543;
-    margin: 44px;
-    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.Paraghrap{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 14px;
+    color: #000000;
+}
+
+.Campo_OBG{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    color: #FF0000;
+}
+
+.Text-box{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #A4A4A4;
+    border: none;
+    width: 340px;
+    height: 20px;
+}
+
+.Button{
+    width: 364px;
+    height: 35px;
+    background: #D0CFFF;
+    color: #070707;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+}
+
+.Result{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+}
+
+body{
+    background: linear-gradient(180deg, #D0CFFF 0%, #9ECAF3 100%);
+    mix-blend-mode: normal;
 }

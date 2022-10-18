@@ -1,17 +1,39 @@
 .title{
     font-size: 42px;
     font-weight: 700;
+    left: 543px;
+    top: 196px;
+}
+
+.rec_Sfondo{
+    position: absolute;
+    width: 558px;
+    height: 560px;
+    top: 170px;
+    left: 441px;
+    align-items: center;
+    text-align: center;
+    background: #FFFFFF;
+}
+
+.Linea{
+    
+    width: 464px;
+    height: 0px;
+    left: 538px;
+    top: 356px;
+    border: 2px solid #535353;
 }
 
 .Paraghrap{
-    font-family: 'Raleway';
+    left: 538px;
     font-style: normal;
     font-size: 14px;
     color: #000000;
 }
 
 .Campo_OBG{
-    font-family: 'Raleway';
+    top: 0;
     font-style: normal;
     font-weight: 400;
     font-size: 11px;
@@ -19,7 +41,6 @@
 }
 
 .Text-box{
-    font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -39,10 +60,11 @@
     font-weight: 700;
     font-size: 14px;
     border: none;
+    left: 538px;
+    top: 597px;
 }
 
 .Result{
-    font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;

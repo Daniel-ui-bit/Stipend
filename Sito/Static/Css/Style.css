@@ -1,46 +1,59 @@
 .title{
     font-size: 42px;
     font-weight: 700;
-    left: 543px;
-    top: 196px;
+    margin-left: 102px;
+    margin-top: 36px;
+    margin-bottom: 54px;
+
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 49px;
+    display: flex;
+    color: #000000;
+
 }
 
 .rec_Sfondo{
-    position: absolute;
+    
     width: 558px;
-    height: 560px;
-    top: 170px;
-    left: 441px;
-    align-items: center;
-    text-align: center;
+    height: 565px;
+    margin-top: 170px;
+    margin-left: 30%;
     background: #FFFFFF;
 }
 
 .Linea{
     
-    width: 464px;
-    height: 0px;
-    left: 538px;
-    top: 356px;
-    border: 2px solid #535353;
+    width: 364px;
+    height: 3px;
+    margin-bottom: 2px;
+    margin-left: 97px;
+    margin-top: 0px;
+    background-color: #535353;
 }
 
 .Paraghrap{
-    left: 538px;
+    margin-top: 9px;
+    margin-left: 97px;
     font-style: normal;
     font-size: 14px;
     color: #000000;
 }
 
 .Campo_OBG{
-    top: 0;
     font-style: normal;
-    font-weight: 400;
+    margin-top: 0px;
+    margin-left: 97px;
+    font-weight: 400px;
     font-size: 11px;
     color: #FF0000;
 }
 
 .Text-box{
+    margin-bottom: 2px;
+    margin-left: 107px;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -60,13 +73,14 @@
     font-weight: 700;
     font-size: 14px;
     border: none;
-    left: 538px;
-    top: 597px;
+    margin-left: 97px;
+    margin-top: 34px;
 }
 
 .Result{
+    margin-top: 15px;
+    margin-left: 97px;
     font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     color: #000000;
 }

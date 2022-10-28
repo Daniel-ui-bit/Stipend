@@ -14,92 +14,120 @@
             
                     <div class="row">
                         <div class="col-12">
-                            <h1 class="title"> Quanto sarai povero </h1>
+                            <h1 class="title"> Quanto sarai povero? </h1>
                         </div>
                     </div>
                     
                     
                     <div class="row">
-                        <div class="col-2">
+                        <div class="col-12">
                             <p class="Paraghrap"><b>Giorni</b></p> 
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-8">
-                            <input type="text" id="DurataLavoro" name="DurataLavoro" placeholder="Quanti giorni durerà il lavoro?" class="Text-box">
+                        <div class="col-12">
+                            <input type="number" id="DurataLavoro" name="DurataLavoro" placeholder="Quanti giorni durerà il lavoro?" class="Text-box">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-12">
                             <hr class="Linea">
+                            <?php
+                                if (isset($_POST["submit"])){
+                                
+                                $DurataLavoro = $_POST["DurataLavoro"];
+                                
+                                if($DurataLavoro == null ){
+                                    echo "<p class='Campo_OBG'>Campo obbligatorio</p>";
+                                }
+                            }
+                            ?>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-4">
-                            <p class="Campo_OBG">Campo obbligatorio</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-4">
+                        <div class="col-12">
                             <p class="Paraghrap">Ore giornaliere di lavoro</p>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-8">
-                            <input type="text" id="QuantoLavori" name="QuantoLavori" placeholder="Quanto lavori al giorno?" class="Text-box">
+                        <div class="col-12">
+                            <input type="number" id="QuantoLavori" name="QuantoLavori" placeholder="Quanto lavori al giorno?" class="Text-box">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-12">
                             <hr class="Linea">
+                            <?php
+                                if (isset($_POST["submit"])){
+                                
+                                $LavoroPerGiorno = $_POST["QuantoLavori"];
+                                
+                                if($LavoroPerGiorno == null ){
+                                    echo "<p class='Campo_OBG'>Campo obbligatorio</p>";
+                                }
+                            }
+                            ?>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-4">
-                            <p class="Campo_OBG">Campo obbligatorio</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-4">
+                        <div class="col-12">
                             <p class="Paraghrap">Compenso orario</p>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-8">
-                            <input type="text" id="PagamentoOra" name="PagamentoOra" placeholder="Quanto verrai pagato all’ora?" class="Text-box">
+                        <div class="col-12">
+                            <input type="number" id="PagamentoOra" name="PagamentoOra" placeholder="Quanto verrai pagato all’ora?" class="Text-box">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-12">
                             <hr class="Linea">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-4">
-                            <p class="Campo_OBG">Campo obbligatorio</p>
+                            <?php
+                                if (isset($_POST["submit"])){
+                                
+                                $PagamentoOra = $_POST["PagamentoOra"];
+                                
+                                if($PagamentoOra == null ){
+                                    echo "<p class='Campo_OBG'>Campo obbligatorio</p>";
+                                }
+                            }
+                            ?>
                         </div>
                     </div>
                 
                     <div class="row">
-                        <div class="col-8">
-                            <input type="submit" name="submit" value="Calcola" class="Button">
+                        <div class="col-12">
+                            <input type="submit" name="submit" value="CALCOLA" class="Button">
                         </div>
                     </div>
                     
                     <div class="row">
-                        <div class="col-8">
-                            <p class="Result">Guadagnerai <b><span id="PagamentoLavoro" class="Result"></span> €</b> lavorando <span id="DurataDelLavoro" class="Result"></span> giorni al compenso di <span id="PagamentoPerOra" class="Result"></span> €/h</p>
+                        <div class="col-12">
+                            <?php
+                                if (isset($_POST["submit"])){
+                                
+                                $DurataLavoro = $_POST["DurataLavoro"];
+                                $LavoroPerGiorno = $_POST["QuantoLavori"];
+                                $PagamentoOra = $_POST["PagamentoOra"];
+                                
+                                if($DurataLavoro != null && $LavoroPerGiorno != null && $PagamentoOra != null ){
+                                    
+                                    if( $DurataLavoro>=0 && $LavoroPerGiorno>=0 && $PagamentoOra>=0 )
+                                        {
+                                            $PagamentoLavoro = ($LavoroPerGiorno*$PagamentoOra)*$DurataLavoro;
+                                            echo "<p class='Result'>Guadagnerai <b>$PagamentoLavoro</b> lavorando $DurataLavoro giorni al compenso di <br>$PagamentoOra €/h</p>";
+                                        }
+                                }
+                            }
+                            ?>
                         </div>
                     </div>
                     
@@ -110,28 +138,3 @@
 </body>
 </html>
 
-<?php
-if (isset($_POST["submit"])){
-        
-
-        $DurataLavoro = $_POST["DurataLavoro"];
-        $LavoroPerGiorno = $_POST["QuantoLavori"];
-        $PagamentoOra = $_POST["PagamentoOra"];
-        if($DurataLavoro != null && $LavoroPerGiorno != null && $PagamentoOra != null ){
-            if( $DurataLavoro>=0 && $LavoroPerGiorno>=0 && $PagamentoOra>=0 )
-            {
-                $PagamentoLavoro = ($LavoroPerGiorno*$PagamentoOra)*$DurataLavoro;
-                echo "<script> Stampa($PagamentoLavoro, $DurataLavoro, $PagamentoOra); </script>";  
-            }
-            else
-            {
-                echo "<script> alert('Attenzione! Inserire un numero maggiore di 0'); </script>";  
-            }
-        }
-        else
-        {
-            echo "<script> alert('Attenzione! Inserire un numero'); </script>";  
-        }
-        
-    }
-?>
